@@ -56,6 +56,8 @@
   }
 
   function startHeroEntrance() {
+    const fadeEls = [...document.querySelectorAll("[data-fade]")];
+
     if (reduceMotion) {
       document.querySelectorAll("[data-split], [data-reveal-lines], [data-fade]").forEach((el) => {
         el.classList.add("is-in");
@@ -64,15 +66,24 @@
     }
 
     requestAnimationFrame(() => {
-      if (splitBrand) splitBrand.classList.add("is-in");
+      const status = document.querySelector(".hero-status");
+      if (status) status.classList.add("is-in");
+
+      window.setTimeout(() => {
+        if (splitBrand) splitBrand.classList.add("is-in");
+      }, 120);
+
       window.setTimeout(() => {
         if (headline) headline.classList.add("is-in");
-      }, 280);
+      }, 380);
+
       window.setTimeout(() => {
-        document.querySelectorAll("[data-fade]").forEach((el, i) => {
-          window.setTimeout(() => el.classList.add("is-in"), i * 120);
-        });
-      }, 720);
+        fadeEls
+          .filter((el) => !el.classList.contains("hero-status"))
+          .forEach((el, i) => {
+            window.setTimeout(() => el.classList.add("is-in"), i * 110);
+          });
+      }, 780);
     });
   }
 
