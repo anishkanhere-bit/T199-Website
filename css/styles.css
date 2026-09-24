@@ -480,12 +480,13 @@ p {
 }
 
 .case-stats dt {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--slate);
   margin-bottom: 0.35rem;
+  line-height: 1.35;
 }
 
 .case-stats dd {
