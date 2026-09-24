@@ -875,6 +875,10 @@ main,
   gap: 1.25rem;
 }
 
+.team-grid-solo {
+  grid-template-columns: minmax(0, 380px);
+}
+
 .person-photo {
   overflow: hidden;
   margin-bottom: 1rem;
