@@ -137,22 +137,6 @@ p {
   background: rgba(244, 247, 250, 0.88);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 42rem;
-}
-
-.hero-lede {
-  font-size: 1.1rem;
-  color: rgba(232, 238, 243, 0.88);
-  max-width: 38ch;
-  margin-bottom: 1.75rem;
-  line-height: 1.7;
 }
 
 .site-header.is-over-hero:not(.is-scrolled) .brand-name,
@@ -371,6 +355,7 @@ p {
   color: rgba(232, 238, 243, 0.88);
   max-width: 38ch;
   margin-bottom: 1.75rem;
+  line-height: 1.7;
 }
 
 .hero-actions {
