@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Northline is a performance advertising platform. We architect, launch, and scale paid media systems that compound revenue for growth-focused brands."
+      content="Northline builds performance advertising systems that compound revenue. Bold media infrastructure for growth focused brands."
     />
-    <title>Northline — Performance Advertising Systems</title>
+    <title>Northline | Performance Advertising Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -20,14 +20,13 @@
   <body>
     <div class="page-loader" aria-hidden="true">
       <div class="loader-inner">
-        <span class="loader-mark">N</span>
-        <span class="loader-name">NORTHLINE</span>
-        <span class="loader-meta">INITIALIZING SYSTEMS</span>
+        <span class="loader-mark">NL</span>
         <span class="loader-bar"></span>
       </div>
     </div>
 
-    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="fx-grid" aria-hidden="true"></div>
+    <div class="fx-noise" aria-hidden="true"></div>
     <div class="scroll-progress" aria-hidden="true"></div>
 
     <a class="skip-link" href="#main">Skip to content</a>
@@ -35,7 +34,7 @@
     <header class="site-header" id="top">
       <nav class="nav container" aria-label="Main navigation">
         <a class="brand" href="#top">
-          <img class="brand-mark" src="images/logo.svg" alt="" width="32" height="32" />
+          <span class="brand-mark" aria-hidden="true">NL</span>
           <span class="brand-name">Northline</span>
         </a>
 
@@ -54,9 +53,9 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="#results">Results</a></li>
           <li><a href="#work">Work</a></li>
-          <li><a href="#services">Systems</a></li>
+          <li><a href="#services">Stack</a></li>
           <li><a href="#approach">Protocol</a></li>
-          <li><a class="btn btn-nav" href="#contact">Deploy growth</a></li>
+          <li><a class="btn btn-nav" href="#contact">Start</a></li>
         </ul>
       </nav>
     </header>
@@ -66,37 +65,45 @@
         <div class="hero-media" aria-hidden="true">
           <img
             class="hero-image"
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2400&q=85"
+            src="https://images.unsplash.com/photo-1639322537504-6427a16b0a28?auto=format&fit=crop&w=2400&q=85"
             alt=""
             width="2400"
             height="1600"
           />
           <div class="hero-veil"></div>
-          <div class="hero-scan"></div>
+          <div class="hero-slash"></div>
         </div>
 
-        <div class="container hero-content">
-          <p class="hero-status" data-fade>
-            <span class="status-dot" aria-hidden="true"></span>
-            Performance systems online
-          </p>
-          <p class="brand-lockup" data-split>Northline</p>
-          <h1 id="hero-title" class="hero-headline" data-reveal-lines>
-            Paid media engineered for compounding revenue.
-          </h1>
-          <p class="hero-lede" data-fade>
-            A precision advertising partnership for brands that treat acquisition like infrastructure—measured, automated, and built to scale.
-          </p>
-          <div class="hero-actions" data-fade>
-            <a class="btn btn-primary" href="#contact">Request system access</a>
-            <a class="btn btn-ghost" href="#work">View performance data</a>
+        <div class="container hero-frame">
+          <div class="hero-content">
+            <p class="brand-lockup" data-split>NORTHLINE</p>
+            <h1 id="hero-title" class="hero-headline" data-reveal-lines>
+              Ads that print revenue.
+            </h1>
+            <p class="hero-lede" data-fade>
+              Performance media systems for brands that want velocity, not vanity metrics.
+            </p>
+            <div class="hero-actions" data-fade>
+              <a class="btn btn-primary" href="#contact">Get access</a>
+              <a class="btn btn-ghost" href="#work">See the numbers</a>
+            </div>
           </div>
-        </div>
 
-        <a class="scroll-cue" href="#results" aria-label="Scroll to results">
-          <span>Scroll</span>
-          <span class="scroll-cue-line" aria-hidden="true"></span>
-        </a>
+          <aside class="hero-rail" data-fade aria-hidden="true">
+            <div class="rail-item">
+              <span>ROAS</span>
+              <strong>+214%</strong>
+            </div>
+            <div class="rail-item">
+              <span>REV</span>
+              <strong>$48M+</strong>
+            </div>
+            <div class="rail-item">
+              <span>CAC</span>
+              <strong>−37%</strong>
+            </div>
+          </aside>
+        </div>
       </section>
 
       <div class="marquee" aria-hidden="true">
@@ -118,29 +125,23 @@
 
       <section class="section results-section" id="results" aria-labelledby="results-title">
         <div class="container">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Telemetry</p>
-            <h2 id="results-title">Outcomes quantified. Not estimated.</h2>
-            <p>
-              Live performance signals across retained accounts—ROAS, incremental revenue, and acquisition efficiency.
-            </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">01 / Signal</p>
+            <h2 id="results-title">Proof at scale.</h2>
           </div>
 
-          <div class="metrics-row" role="list">
+          <div class="metrics-stack" role="list">
             <article class="metric reveal" role="listitem">
-              <p class="metric-code">SIG.01</p>
               <p class="metric-value" data-count="214" data-suffix="%">0%</p>
-              <p class="metric-label">Average ROAS improvement across retained accounts</p>
+              <p class="metric-label">Avg ROAS lift on retained accounts</p>
             </article>
             <article class="metric reveal" role="listitem">
-              <p class="metric-code">SIG.02</p>
-              <p class="metric-value" data-count="48" data-prefix="$" data-suffix="M+">$0</p>
-              <p class="metric-label">Incremental client revenue attributed in the last 24 months</p>
+              <p class="metric-value" data-count="48" data-prefix="$" data-suffix="M">$0</p>
+              <p class="metric-label">Incremental revenue attributed · 24 mo</p>
             </article>
             <article class="metric reveal" role="listitem">
-              <p class="metric-code">SIG.03</p>
               <p class="metric-value" data-count="37" data-suffix="%">0%</p>
-              <p class="metric-label">Median reduction in customer acquisition cost</p>
+              <p class="metric-label">Median CAC reduction</p>
             </article>
           </div>
         </div>
@@ -148,12 +149,9 @@
 
       <section class="section work-section" id="work" aria-labelledby="work-title">
         <div class="container">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Case archive</p>
-            <h2 id="work-title">Deployments that shifted the curve.</h2>
-            <p>
-              Illustrative engagements across retail, wellness, home, and beauty—each built as a closed-loop growth system.
-            </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">02 / Archive</p>
+            <h2 id="work-title">Deployments.</h2>
           </div>
 
           <div class="case-list">
@@ -161,31 +159,23 @@
               <div class="case-media">
                 <img
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=85"
-                  alt="Meridian Retail Co. store floor with apparel displays"
+                  alt="Meridian Retail Co. store floor"
                   width="1400"
                   height="933"
                   loading="lazy"
                 />
+                <span class="case-tag">01</span>
               </div>
               <div class="case-body">
                 <p class="case-client">Meridian Retail Co.</p>
-                <h3>National apparel—paid social &amp; search rebuild</h3>
+                <h3>Apparel rebuild · Meta + Google</h3>
                 <p>
-                  Rebuilt audience architecture, creative testing cadence, and bidding strategy across Meta and Google. Shifted spend toward proven conversion paths within eight weeks.
+                  Audience architecture, creative velocity, and bidding rebuilt in eight weeks. Spend locked onto conversion paths that actually clear margin.
                 </p>
                 <dl class="case-stats">
-                  <div>
-                    <dt>Revenue lift</dt>
-                    <dd>+162%</dd>
-                  </div>
-                  <div>
-                    <dt>ROAS</dt>
-                    <dd>5.8×</dd>
-                  </div>
-                  <div>
-                    <dt>Timeline</dt>
-                    <dd>6 mo</dd>
-                  </div>
+                  <div><dt>Lift</dt><dd>+162%</dd></div>
+                  <div><dt>ROAS</dt><dd>5.8×</dd></div>
+                  <div><dt>Time</dt><dd>6 mo</dd></div>
                 </dl>
               </div>
             </article>
@@ -194,31 +184,23 @@
               <div class="case-media">
                 <img
                   src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1400&q=85"
-                  alt="Atlas Fitness training floor with athletes"
+                  alt="Atlas Fitness training floor"
                   width="1400"
                   height="933"
                   loading="lazy"
                 />
+                <span class="case-tag">02</span>
               </div>
               <div class="case-body">
                 <p class="case-client">Atlas Fitness</p>
-                <h3>Multi-location membership acquisition</h3>
+                <h3>Multi location acquisition mesh</h3>
                 <p>
-                  Unified local campaigns under a single performance framework, introduced trial-offer creatives, and connected CRM events to media for closed-loop optimization.
+                  Local campaigns unified under one performance framework. CRM events wired into media for closed loop optimization.
                 </p>
                 <dl class="case-stats">
-                  <div>
-                    <dt>Incremental</dt>
-                    <dd>$2.4M</dd>
-                  </div>
-                  <div>
-                    <dt>CAC</dt>
-                    <dd>−41%</dd>
-                  </div>
-                  <div>
-                    <dt>Timeline</dt>
-                    <dd>9 mo</dd>
-                  </div>
+                  <div><dt>Rev</dt><dd>$2.4M</dd></div>
+                  <div><dt>CAC</dt><dd>−41%</dd></div>
+                  <div><dt>Time</dt><dd>9 mo</dd></div>
                 </dl>
               </div>
             </article>
@@ -227,31 +209,23 @@
               <div class="case-media">
                 <img
                   src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=85"
-                  alt="Harbor Home Goods interior with refined furnishings"
+                  alt="Harbor Home Goods interior"
                   width="1400"
                   height="933"
                   loading="lazy"
                 />
+                <span class="case-tag">03</span>
               </div>
               <div class="case-body">
                 <p class="case-client">Harbor Home Goods</p>
-                <h3>E-commerce scaling for seasonal demand</h3>
+                <h3>Seasonal commerce scale</h3>
                 <p>
-                  Expanded prospecting while protecting branded search, introduced catalog ads with margin-aware bidding, and smoothed spend through peak holiday windows.
+                  Prospecting expanded, brand search protected, catalog bidding made margin aware through peak demand windows.
                 </p>
                 <dl class="case-stats">
-                  <div>
-                    <dt>YoY revenue</dt>
-                    <dd>+218%</dd>
-                  </div>
-                  <div>
-                    <dt>AOV</dt>
-                    <dd>+19%</dd>
-                  </div>
-                  <div>
-                    <dt>Timeline</dt>
-                    <dd>12 mo</dd>
-                  </div>
+                  <div><dt>YoY</dt><dd>+218%</dd></div>
+                  <div><dt>AOV</dt><dd>+19%</dd></div>
+                  <div><dt>Time</dt><dd>12 mo</dd></div>
                 </dl>
               </div>
             </article>
@@ -260,31 +234,23 @@
               <div class="case-media">
                 <img
                   src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1400&q=85"
-                  alt="Lumina Beauty product lineup on a clean surface"
+                  alt="Lumina Beauty products"
                   width="1400"
                   height="933"
                   loading="lazy"
                 />
+                <span class="case-tag">04</span>
               </div>
               <div class="case-body">
                 <p class="case-client">Lumina Beauty</p>
-                <h3>Direct-to-consumer launch and scale</h3>
+                <h3>DTC launch stack</h3>
                 <p>
-                  Built a full-funnel paid program from zero: creative systems, influencer amplification into paid, and lifecycle retargeting tied to subscription conversion.
+                  Full funnel from zero: creative systems, paid amplification, subscription retargeting locked to payback.
                 </p>
                 <dl class="case-stats">
-                  <div>
-                    <dt>Revenue</dt>
-                    <dd>3.2×</dd>
-                  </div>
-                  <div>
-                    <dt>Payback</dt>
-                    <dd>47d</dd>
-                  </div>
-                  <div>
-                    <dt>Timeline</dt>
-                    <dd>6 mo</dd>
-                  </div>
+                  <div><dt>Mult</dt><dd>3.2×</dd></div>
+                  <div><dt>Payback</dt><dd>47d</dd></div>
+                  <div><dt>Time</dt><dd>6 mo</dd></div>
                 </dl>
               </div>
             </article>
@@ -294,85 +260,63 @@
 
       <section class="section services-section" id="services" aria-labelledby="services-title">
         <div class="container">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Operating stack</p>
-            <h2 id="services-title">The full system behind paid growth.</h2>
-            <p>
-              Strategy, creative, media buying, and analytics—wired as one pipeline so every dollar trains the next.
-            </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">03 / Stack</p>
+            <h2 id="services-title">What we run.</h2>
           </div>
 
           <ol class="service-list">
             <li class="service reveal">
-              <span class="service-index" aria-hidden="true">01</span>
-              <div>
-                <h3>Media architecture</h3>
-                <p>
-                  Channel mix, budget logic, and growth hypotheses grounded in unit economics—not platform defaults.
-                </p>
-              </div>
+              <span class="service-index">01</span>
+              <h3>Media architecture</h3>
+              <p>Channel mix, budget logic, hypotheses from unit economics.</p>
             </li>
             <li class="service reveal">
-              <span class="service-index" aria-hidden="true">02</span>
-              <div>
-                <h3>Campaign operations</h3>
-                <p>
-                  Hands-on management across Meta, Google, LinkedIn, and programmatic—with disciplined testing and clear change logs.
-                </p>
-              </div>
+              <span class="service-index">02</span>
+              <h3>Campaign operations</h3>
+              <p>Meta, Google, LinkedIn, programmatic: tested and logged.</p>
             </li>
             <li class="service reveal">
-              <span class="service-index" aria-hidden="true">03</span>
-              <div>
-                <h3>Creative systems</h3>
-                <p>
-                  Continuous production of ads engineered for attention, message match, and measurable lift—not one-off assets.
-                </p>
-              </div>
+              <span class="service-index">03</span>
+              <h3>Creative systems</h3>
+              <p>Continuous ads built for lift, not one time campaigns.</p>
             </li>
             <li class="service reveal">
-              <span class="service-index" aria-hidden="true">04</span>
-              <div>
-                <h3>Measurement layer</h3>
-                <p>
-                  Clean tracking, incrementality checks, and reporting your leadership team can trust for budget decisions.
-                </p>
-              </div>
+              <span class="service-index">04</span>
+              <h3>Measurement layer</h3>
+              <p>Tracking, incrementality, board ready reporting.</p>
             </li>
           </ol>
         </div>
       </section>
 
       <section class="section approach-section" id="approach" aria-labelledby="approach-title">
-        <div class="container approach-grid">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Protocol</p>
-            <h2 id="approach-title">Four phases. Zero ambiguity.</h2>
-            <p>
-              A disciplined deployment sequence—each stage with a clear owner, signal, and go / no-go gate.
-            </p>
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">04 / Protocol</p>
+            <h2 id="approach-title">Four moves.</h2>
           </div>
 
           <ol class="steps">
             <li class="step reveal">
               <span class="step-num">01</span>
               <h3>Diagnose</h3>
-              <p>Audit accounts, creative, funnel, and unit economics. Define the revenue target and constraints.</p>
+              <p>Accounts, funnel, economics. Lock the target.</p>
             </li>
             <li class="step reveal">
               <span class="step-num">02</span>
               <h3>Architect</h3>
-              <p>Design channel strategy, tracking plan, creative roadmap, and a 90-day test agenda.</p>
+              <p>Channels, tracking, creative roadmap, 90 day tests.</p>
             </li>
             <li class="step reveal">
               <span class="step-num">03</span>
               <h3>Launch</h3>
-              <p>Stand up campaigns with rigorous naming, budgets, and QA—then watch early signals closely.</p>
+              <p>Clean build. Hard QA. Watch early signal.</p>
             </li>
             <li class="step reveal">
               <span class="step-num">04</span>
               <h3>Scale</h3>
-              <p>Double down on winners, retire waste, and expand spend only when efficiency holds.</p>
+              <p>Feed winners. Kill waste. Spend only when efficiency holds.</p>
             </li>
           </ol>
         </div>
@@ -380,12 +324,9 @@
 
       <section class="section team-section" id="team" aria-labelledby="team-title">
         <div class="container">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Operators</p>
-            <h2 id="team-title">Senior bench. Direct line.</h2>
-            <p>
-              A compact partnership team that stays inside your numbers, creative, and decision cadence.
-            </p>
+          <div class="section-head reveal">
+            <p class="eyebrow">05 / Operators</p>
+            <h2 id="team-title">Who runs it.</h2>
           </div>
 
           <div class="team-grid">
@@ -393,40 +334,40 @@
               <div class="person-photo">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85"
-                  alt="Portrait of Elena Vargas"
+                  alt="Elena Vargas"
                   width="900"
                   height="1125"
                   loading="lazy"
                 />
               </div>
               <h3>Elena Vargas</h3>
-              <p>Founding Partner, Strategy</p>
+              <p>Strategy</p>
             </article>
             <article class="person reveal">
               <div class="person-photo">
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85"
-                  alt="Portrait of Marcus Chen"
+                  alt="Marcus Chen"
                   width="900"
                   height="1125"
                   loading="lazy"
                 />
               </div>
               <h3>Marcus Chen</h3>
-              <p>Partner, Media Systems</p>
+              <p>Media</p>
             </article>
             <article class="person reveal">
               <div class="person-photo">
                 <img
                   src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=85"
-                  alt="Portrait of Priya Nair"
+                  alt="Priya Nair"
                   width="900"
                   height="1125"
                   loading="lazy"
                 />
               </div>
               <h3>Priya Nair</h3>
-              <p>Director, Creative Performance</p>
+              <p>Creative</p>
             </article>
           </div>
         </div>
@@ -435,51 +376,51 @@
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
         <div class="container contact-grid">
           <div class="contact-copy reveal">
-            <p class="eyebrow">Engage</p>
-            <h2 id="contact-title">Ready to deploy the next growth layer?</h2>
+            <p class="eyebrow">06 / Engage</p>
+            <h2 id="contact-title">Build the next layer.</h2>
             <p>
-              Share your brand and current media investment. A partner responds within two business days—with next steps, or an honest decline if we are not the right fit.
+              Tell us the brand and spend. We reply in two business days, or decline if we are not the fit.
             </p>
             <ul class="contact-details">
               <li>
-                <span>Signal</span>
+                <span>Mail</span>
                 <a href="mailto:hello@northline.agency">hello@northline.agency</a>
               </li>
               <li>
-                <span>Node</span>
-                <span class="contact-plain">220 Market Street, Suite 410 · San Francisco</span>
+                <span>HQ</span>
+                <span class="contact-plain">220 Market St · San Francisco</span>
               </li>
             </ul>
           </div>
 
           <form class="contact-form reveal" aria-label="Project inquiry form" novalidate>
             <label>
-              Full name
+              Name
               <input type="text" name="name" autocomplete="name" required placeholder="Jordan Hale" />
             </label>
             <label>
-              Work email
+              Email
               <input type="email" name="email" autocomplete="email" required placeholder="jordan@company.com" />
             </label>
             <label>
               Company
-              <input type="text" name="company" autocomplete="organization" placeholder="Your company" />
+              <input type="text" name="company" autocomplete="organization" placeholder="Company" />
             </label>
             <label>
-              Monthly media spend
+              Monthly spend
               <select name="spend" required>
-                <option value="" disabled selected>Select a range</option>
-                <option value="under-25k">Under $25,000</option>
-                <option value="25-75k">$25,000 – $75,000</option>
-                <option value="75-200k">$75,000 – $200,000</option>
-                <option value="200k-plus">$200,000+</option>
+                <option value="" disabled selected>Select</option>
+                <option value="under-25k">Under $25k</option>
+                <option value="25-75k">$25k to $75k</option>
+                <option value="75-200k">$75k to $200k</option>
+                <option value="200k-plus">$200k+</option>
               </select>
             </label>
             <label class="full">
-              Growth objective
-              <textarea name="message" rows="4" placeholder="Channels, targets, timeline…" required></textarea>
+              Objective
+              <textarea name="message" rows="4" placeholder="Channels, target, timeline" required></textarea>
             </label>
-            <button class="btn btn-primary" type="submit">Transmit inquiry</button>
+            <button class="btn btn-primary" type="submit">Send</button>
             <p class="form-status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>
@@ -489,13 +430,10 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <img src="images/logo.svg" alt="" width="28" height="28" />
+          <span class="brand-mark" aria-hidden="true">NL</span>
           <span>Northline</span>
         </div>
-        <p class="footer-note">
-          Performance advertising systems. Demo site with fictional clients and outcomes.
-        </p>
-        <p class="footer-copy">© <span id="year"></span> Northline Systems</p>
+        <p class="footer-copy">© <span id="year"></span> Northline Systems · Demo with fictional outcomes</p>
       </div>
     </footer>
 
