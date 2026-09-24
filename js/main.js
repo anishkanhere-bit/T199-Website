@@ -64,19 +64,24 @@
     }
 
     requestAnimationFrame(() => {
+      const status = document.querySelector(".hero-status");
+      if (status) status.classList.add("is-in");
+
       window.setTimeout(() => {
         if (splitBrand) splitBrand.classList.add("is-in");
-      }, 40);
+      }, 120);
 
       window.setTimeout(() => {
         if (headline) headline.classList.add("is-in");
-      }, 280);
+      }, 380);
 
       window.setTimeout(() => {
-        fadeEls.forEach((el, i) => {
-          window.setTimeout(() => el.classList.add("is-in"), i * 100);
-        });
-      }, 580);
+        fadeEls
+          .filter((el) => !el.classList.contains("hero-status"))
+          .forEach((el, i) => {
+            window.setTimeout(() => el.classList.add("is-in"), i * 110);
+          });
+      }, 720);
     });
   }
 
