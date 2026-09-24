@@ -13,7 +13,6 @@
 
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* —— Intro loader —— */
   body.classList.add("is-loading");
 
   const finishLoader = () => {
@@ -25,10 +24,9 @@
   if (reduceMotion) {
     finishLoader();
   } else {
-    window.setTimeout(finishLoader, 1500);
+    window.setTimeout(finishLoader, 1200);
   }
 
-  /* —— Hero text choreography —— */
   const splitBrand = document.querySelector("[data-split]");
   if (splitBrand && !reduceMotion) {
     const text = splitBrand.textContent.trim();
@@ -36,8 +34,8 @@
     [...text].forEach((ch, i) => {
       const span = document.createElement("span");
       span.className = "char";
-      span.textContent = ch;
-      span.style.transitionDelay = `${0.05 + i * 0.045}s`;
+      span.textContent = ch === " " ? "\u00A0" : ch;
+      span.style.transitionDelay = `${0.04 + i * 0.04}s`;
       splitBrand.appendChild(span);
     });
   }
@@ -72,17 +70,16 @@
 
       window.setTimeout(() => {
         if (headline) headline.classList.add("is-in");
-      }, 320);
+      }, 280);
 
       window.setTimeout(() => {
         fadeEls.forEach((el, i) => {
-          window.setTimeout(() => el.classList.add("is-in"), i * 90);
+          window.setTimeout(() => el.classList.add("is-in"), i * 100);
         });
-      }, 620);
+      }, 580);
     });
   }
 
-  /* —— Header + progress + parallax —— */
   const updateChrome = () => {
     const y = window.scrollY;
     if (header) {
@@ -95,15 +92,11 @@
 
     if (progress) {
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? (y / max) * 100 : 0;
-      progress.style.width = `${pct}%`;
+      progress.style.width = `${max > 0 ? (y / max) * 100 : 0}%`;
     }
 
-    if (heroImage && !reduceMotion && hero) {
-      const heroH = hero.offsetHeight;
-      if (y < heroH) {
-        heroImage.style.transform = `scale(1.02) translate3d(0, ${y * 0.22}px, 0)`;
-      }
+    if (heroImage && !reduceMotion && hero && y < hero.offsetHeight) {
+      heroImage.style.transform = `scale(1.02) translate3d(0, ${y * 0.18}px, 0)`;
     }
   };
 
@@ -111,7 +104,6 @@
   window.addEventListener("scroll", updateChrome, { passive: true });
   window.addEventListener("resize", updateChrome);
 
-  /* —— Mobile nav —— */
   if (navToggle && navLinks) {
     const setOpen = (open) => {
       navToggle.setAttribute("aria-expanded", String(open));
@@ -133,7 +125,6 @@
     });
   }
 
-  /* —— Scroll reveals —— */
   const revealEls = document.querySelectorAll(".reveal");
 
   if (reduceMotion) {
@@ -154,14 +145,13 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* —— Metric counters —— */
   const metrics = document.querySelectorAll("[data-count]");
 
   const animateCount = (el) => {
     const target = Number(el.dataset.count);
     const prefix = el.dataset.prefix || "";
     const suffix = el.dataset.suffix || "";
-    const duration = 1800;
+    const duration = 1600;
     const start = performance.now();
 
     const tick = (now) => {
@@ -192,7 +182,6 @@
     metrics.forEach((el) => countObserver.observe(el));
   }
 
-  /* —— Form —— */
   if (form) {
     const status = form.querySelector(".form-status");
 

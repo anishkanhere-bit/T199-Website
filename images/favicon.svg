@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#030303"/>
-  <rect x="0" y="0" width="32" height="32" fill="#c6ff3d"/>
-  <text x="16" y="22" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="11" font-weight="800" fill="#030303">NL</text>
+  <rect width="32" height="32" rx="3" fill="#0b1524"/>
+  <path d="M8 23V9h2.75l7.75 9.75V9H22v14h-2.75L11.5 13.25V23H8z" fill="#eef2f7"/>
+  <rect x="8" y="25.5" width="14" height="2" rx="1" fill="#c4a35a"/>
 </svg>
